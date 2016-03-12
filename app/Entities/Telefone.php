@@ -16,4 +16,9 @@ class Telefone extends Model
     protected $table = 'telefones';
 
     protected $fillable = ['descricao', 'codpais', 'ddd', 'prefixo', 'sufixo'];
+
+    public function getNumeroAttribute()
+    {
+        return "{$this->codpais} ({$this->ddd}) {$this->prefixo}-{$this->sufixo}";
+    }
 }
