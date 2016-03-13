@@ -24,7 +24,9 @@
         <div class="col-lg-12 page-header">
             <h1>
                 Code.Education<br>
-                <small><i class="glyphicon glyphicon-phone-alt"></i> Agenda Telefônica</small>
+                <small>
+                    <a href="{{ route('agenda.index') }}"> <i class="glyphicon glyphicon-phone-alt"></i> Agenda Telefônica </a>
+                </small>
                 <span class="pull-right">
                     <form id="form-busca" class="form-inline" action="{{ route('agenda.busca') }}" method="post">
                         <div class="input-group">
@@ -47,7 +49,7 @@
     </div>
     <div class="row">
         <div class="col-lg-12 btn-row">
-            <a href="#" class="btn btn-primary">Novo Contato</a>
+            <a href="{{ route('pessoa.create') }}" class="btn btn-primary">Novo Contato</a>
         </div>
     </div>
     <div class="row">

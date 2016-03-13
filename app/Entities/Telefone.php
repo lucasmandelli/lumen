@@ -15,7 +15,12 @@ class Telefone extends Model
 {
     protected $table = 'telefones';
 
-    protected $fillable = ['descricao', 'codpais', 'ddd', 'prefixo', 'sufixo'];
+    protected $fillable = ['descricao', 'codpais', 'ddd', 'prefixo', 'sufixo', 'pessoa_id'];
+
+    public function pessoa()
+    {
+        return $this->belongsTo(Pessoa::class);
+    }
 
     public function getNumeroAttribute()
     {
